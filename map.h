@@ -4,12 +4,15 @@
 #include <iostream>
 
 class Play_zone{
-    private:
-        int zone[15][20];
+    protected:
+        int zone[16][21];
 
     public:
+        int (&get_zone())[16][21] { return zone; }
         Play_zone();
         void show();
+
+   
 };
 
 

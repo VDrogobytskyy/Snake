@@ -2,10 +2,10 @@
 
 Play_zone :: Play_zone(){
 
-    for(int i = 0; i < 15; i++){
-        for(int k = 0; k < 20; k++){
+    for(int i = 0; i < 16; i++){
+        for(int k = 0; k < 21; k++){
 
-            if(i == 0 || i == 14 || k == 0 || k == 19){
+            if(i == 0 || i == 15 || k == 0 || k == 20){
                 zone[i][k] = 7;
 
             }else{
@@ -13,12 +13,16 @@ Play_zone :: Play_zone(){
             }
         }
     }
+
+    
+    
 }
 
 void Play_zone :: show(){
 
-    for(int i = 0; i < 15; i++){
-        for(int k = 0; k < 20; k++){
+    for(int i = 0; i < 16; i++){
+        for(int k = 0; k < 21; k++){
+
 
             if(zone[i][k] == 0) {
                 std::cout << "  ";

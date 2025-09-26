@@ -1,15 +1,16 @@
 #include <iostream>
 
 #include "map.h"
-
+#include "snake.h"
 
 
 int main(void){
     std::cout << std::endl;
 
-    Play_zone test_play_zone;
+    Snake snake;
+    Play_zone zone;
 
-    test_play_zone.show();
+    snake.snake_moving(snake.snake_pozition);
 
     std::cout << std::endl;
     return 0;
