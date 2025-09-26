@@ -17,6 +17,20 @@ bool Snake :: is_snake_inside_zone(const PairVec &snake_position){
 void Snake :: snake_moving(const PairVec &snake_position){
     int x_pos = snake_position[0].first;
     int y_pos = snake_position[0].second;
-    zone[x_pos][y_pos] = 9;
+
+    if(is_snake_inside_zone(snake_position)){
+        zone[x_pos][y_pos] = 9;
+    }
+
     show();
+}
+
+void Snake :: set_snake_pos(int x, int y){
+    PairVec temp = { {x, y} };
+
+    if(!snake_pozition.empty() && is_snake_inside_zone(temp)){
+        snake_pozition[0] = { x, y };
+    }else{
+        throw "there is no snake";
+    }
 }

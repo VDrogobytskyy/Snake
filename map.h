@@ -12,6 +12,13 @@ class Play_zone{
         Play_zone();
         void show();
 
+        void clear_screen(){
+            #ifdef _WIN32
+                system("cls");
+            #else
+                system("clear");
+            #endif
+        }
    
 };
 

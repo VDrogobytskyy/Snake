@@ -19,7 +19,7 @@ Play_zone :: Play_zone(){
 }
 
 void Play_zone :: show(){
-
+    clear_screen();
     for(int i = 0; i < 16; i++){
         for(int k = 0; k < 21; k++){
 
